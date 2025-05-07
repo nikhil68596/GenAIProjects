@@ -27,20 +27,24 @@ make_sandwich("lettuce", "tomato", "cheese")
 print("\n")
 
 # Task 4 - Understanding Recursion
-def factorial(n):
-    if n < 0:
-        return None
-    if n == 0 or n == 1:
-        return 1
-    return n * factorial(n - 1)
 
+#Function to find the factorial of a number.
+def factorial(n):
+    if n < 0: #Invalid factorial for a negative number
+        return None
+    if n == 0 or n == 1: #Base case
+        return 1
+    return n * factorial(n - 1) #Recursive step
+
+#Function to find the nth number of the fibonacci sequence.
 def fibonacci(n):
+    #2 base cases
     if n <= 0:
         return 0
     elif n == 1:
         return 1
     else:
-        return fibonacci(n - 1) + fibonacci(n - 2)
+        return fibonacci(n - 1) + fibonacci(n - 2) #Recursive step
 
 num, fib_num = 5, 6
 factrl = factorial(num)
